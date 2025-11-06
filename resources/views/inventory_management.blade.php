@@ -51,23 +51,23 @@
 </div>
 <nav class="flex-grow p-4">
 <div class="flex flex-col gap-2">
-<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" href="#">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" href="{{ route('dashboard') }}">
 <span class="material-symbols-outlined">dashboard</span>
 <p class="text-sm font-medium">Dashboard</p>
 </a>
-<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/10 text-primary dark:bg-primary/20 dark:text-primary" href="#">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/10 text-primary dark:bg-primary/20 dark:text-primary" href="{{ route('inventory') }}">
 <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">inventory_2</span>
 <p class="text-sm font-medium">Stock Management</p>
 </a>
-<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" href="#">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" href="{{ route('orders') }}">
 <span class="material-symbols-outlined">shopping_cart</span>
 <p class="text-sm font-medium">Orders</p>
 </a>
-<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" href="#">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" href="{{ route('suppliers') }}">
 <span class="material-symbols-outlined">group</span>
 <p class="text-sm font-medium">Suppliers</p>
 </a>
-<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" href="#">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" href="{{ route('reporting') }}">
 <span class="material-symbols-outlined">assessment</span>
 <p class="text-sm font-medium">Reports</p>
 </a>

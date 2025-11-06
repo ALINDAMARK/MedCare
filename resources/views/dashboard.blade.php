@@ -52,23 +52,23 @@
 <h1 class="text-slate-900 dark:text-white text-xl font-bold leading-normal">Medcare ERP</h1>
 </div>
 <nav class="flex flex-col gap-2 mt-4">
-<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/10 text-primary" href="#">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/10 text-primary" href="{{ route('dashboard') }}">
 <span class="material-symbols-outlined fill text-primary">dashboard</span>
 <p class="text-sm font-semibold leading-normal">Dashboard</p>
 </a>
-<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800" href="#">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800" href="{{ route('inventory') }}">
 <span class="material-symbols-outlined">inventory_2</span>
 <p class="text-sm font-medium leading-normal">Inventory</p>
 </a>
-<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800" href="#">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800" href="{{ route('orders') }}">
 <span class="material-symbols-outlined">shopping_cart</span>
 <p class="text-sm font-medium leading-normal">Orders</p>
 </a>
-<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800" href="#">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800" href="{{ route('suppliers') }}">
 <span class="material-symbols-outlined">groups</span>
 <p class="text-sm font-medium leading-normal">Suppliers</p>
 </a>
-<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800" href="#">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800" href="{{ route('reporting') }}">
 <span class="material-symbols-outlined">lab_profile</span>
 <p class="text-sm font-medium leading-normal">Reports</p>
 </a>

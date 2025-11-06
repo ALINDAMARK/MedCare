@@ -14,12 +14,12 @@ use App\Http\Controllers\PageController;
 |
 */
 
-Route::get('/', function () {
+Route::get('/welcome', function () {
     return view('welcome');
 });
 
 // Basic page routes for the app's blade views
-Route::get('/dashboard', [PageController::class, 'dashboard'])->name('dashboard');
+Route::get('/', [PageController::class, 'dashboard'])->name('dashboard');
 Route::get('/inventory', [PageController::class, 'inventory'])->name('inventory');
 Route::get('/orders', [PageController::class, 'orders'])->name('orders');
 Route::get('/products', [PageController::class, 'products'])->name('products');

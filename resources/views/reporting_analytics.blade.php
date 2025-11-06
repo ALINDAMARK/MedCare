@@ -50,10 +50,10 @@
 </div>
 <div class="hidden md:flex flex-1 justify-center gap-8">
 <div class="flex items-center gap-9">
-<a class="text-sm font-medium leading-normal text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary" href="#">Dashboard</a>
-<a class="text-sm font-medium leading-normal text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary" href="#">Inventory</a>
-<a class="text-sm font-medium leading-normal text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary" href="#">Sales</a>
-<a class="text-sm font-bold leading-normal text-primary" href="#">Reports</a>
+<a class="text-sm font-medium leading-normal text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary" href="{{ route('dashboard') }}">Dashboard</a>
+<a class="text-sm font-medium leading-normal text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary" href="{{ route('inventory') }}">Inventory</a>
+<a class="text-sm font-medium leading-normal text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary" href="{{ route('products') }}">Sales</a>
+<a class="text-sm font-bold leading-normal text-primary" href="{{ route('reporting') }}">Reports</a>
 </div>
 </div>
 <div class="flex flex-1 justify-end items-center gap-3">

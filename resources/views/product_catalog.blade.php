@@ -52,8 +52,8 @@
 <h2 class="text-xl font-bold leading-tight tracking-[-0.015em] text-text-light dark:text-text-dark">Medcare Store</h2>
 </div>
 <nav class="hidden md:flex items-center gap-6">
-<a class="text-sm font-medium hover:text-primary" href="#">Home</a>
-<a class="text-sm font-medium hover:text-primary" href="#">Prescriptions</a>
+<a class="text-sm font-medium hover:text-primary" href="{{ url('/') }}">Home</a>
+<a class="text-sm font-medium hover:text-primary" href="{{ route('products') }}">Prescriptions</a>
 <a class="text-sm font-medium hover:text-primary" href="#">About Us</a>
 </nav>
 </div>
@@ -84,23 +84,23 @@
 <div>
 <h3 class="text-base font-bold leading-normal mb-3">Categories</h3>
 <div class="flex flex-col gap-1">
-<a class="flex items-center gap-3 rounded-lg bg-primary/20 px-3 py-2 text-primary" href="#">
+<a class="flex items-center gap-3 rounded-lg bg-primary/20 px-3 py-2 text-primary" href="{{ route('products') }}">
 <span class="material-symbols-outlined">pill</span>
 <p class="text-sm font-medium">Pain Relief</p>
 </a>
-<a class="flex items-center gap-3 rounded-lg px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-700" href="#">
+<a class="flex items-center gap-3 rounded-lg px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-700" href="{{ route('products') }}">
 <span class="material-symbols-outlined">device_thermostat</span>
 <p class="text-sm font-medium">Cold &amp; Flu</p>
 </a>
-<a class="flex items-center gap-3 rounded-lg px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-700" href="#">
+<a class="flex items-center gap-3 rounded-lg px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-700" href="{{ route('products') }}">
 <span class="material-symbols-outlined">nutrition</span>
 <p class="text-sm font-medium">Vitamins &amp; Supplements</p>
 </a>
-<a class="flex items-center gap-3 rounded-lg px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-700" href="#">
+<a class="flex items-center gap-3 rounded-lg px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-700" href="{{ route('products') }}">
 <span class="material-symbols-outlined">spa</span>
 <p class="text-sm font-medium">Skincare</p>
 </a>
-<a class="flex items-center gap-3 rounded-lg px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-700" href="#">
+<a class="flex items-center gap-3 rounded-lg px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-700" href="{{ route('products') }}">
 <span class="material-symbols-outlined">wounds_injuries</span>
 <p class="text-sm font-medium">First Aid</p>
 </a>
