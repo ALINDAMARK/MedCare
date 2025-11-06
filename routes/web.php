@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\OrderController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\SupplierController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,3 +28,15 @@ Route::get('/orders', [PageController::class, 'orders'])->name('orders');
 Route::get('/products', [PageController::class, 'products'])->name('products');
 Route::get('/reporting', [PageController::class, 'reporting'])->name('reporting');
 Route::get('/suppliers', [PageController::class, 'suppliers'])->name('suppliers');
+
+// Resourceful controllers for CRUD
+// Keep the legacy route names used by the views (inventory, products, orders, suppliers)
+Route::get('/inventory', [ProductController::class, 'index'])->name('inventory');
+Route::get('/products', [ProductController::class, 'index'])->name('products');
+Route::resource('products', ProductController::class)->except(['index']);
+
+Route::get('/orders', [OrderController::class, 'index'])->name('orders');
+Route::resource('orders', OrderController::class)->except(['index']);
+
+Route::get('/suppliers', [SupplierController::class, 'index'])->name('suppliers');
+Route::resource('suppliers', SupplierController::class)->except(['index']);
