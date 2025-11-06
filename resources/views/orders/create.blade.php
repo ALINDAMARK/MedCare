@@ -1,6 +1,10 @@
 <!doctype html>
 <html>
-<head><meta charset="utf-8"><title>Create Order</title></head>
+<head>
+    <meta charset="utf-8">
+    <title>Create Order</title>
+    <link rel="stylesheet" href="{{ asset('css/form.css') }}">
+</head>
 <body>
 <h1>Create Order</h1>
 @if(session('success'))<p style="color:green">{{ session('success') }}</p>@endif
@@ -25,7 +29,7 @@
     <div><label>Quantity</label><input name="quantity" value="{{ old('quantity',1) }}" /></div>
     <div><label>Total</label><input name="total" value="{{ old('total') }}" /></div>
     <div><label>Status</label><input name="status" value="{{ old('status','pending') }}" /></div>
-    <button type="submit">Create</button>
-</form>
+    <button type="submit" class="btn">Create</button>
+    <script src="{{ asset('js/form.js') }}"></script>
 </body>
 </html>

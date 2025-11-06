@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Edit Product</title>
+    <link rel="stylesheet" href="{{ asset('css/form.css') }}">
 </head>
 <body>
     <h1>Edit Product</h1>
@@ -38,5 +39,6 @@
         @method('DELETE')
         <button type="submit" style="color:red">Delete</button>
     </form>
+    <script src="{{ asset('js/form.js') }}"></script>
 </body>
 </html>

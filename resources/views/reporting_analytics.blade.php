@@ -3,7 +3,7 @@
 <html class="light" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Medcare ERP - Reports</title>
+<title>Medcare- Reports</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
@@ -46,7 +46,7 @@
 <path d="M4 42.4379C4 42.4379 14.0962 36.0744 24 41.1692C35.0664 46.8624 44 42.2078 44 42.2078L44 7.01134C44 7.01134 35.068 11.6577 24.0031 5.96913C14.0971 0.876274 4 7.27094 4 7.27094L4 42.4379Z" fill="currentColor"></path>
 </svg>
 </div>
-<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">Medcare ERP</h2>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">Medcare</h2>
 </div>
 <div class="hidden md:flex flex-1 justify-center gap-8">
 <div class="flex items-center gap-9">

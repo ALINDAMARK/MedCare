@@ -3,7 +3,7 @@
 <html class="light" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Medcare ERP - Order Management</title>
+<title>Medcare- Order Management</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
@@ -49,7 +49,7 @@
 <span class="material-symbols-outlined">health_and_safety</span>
 </div>
 <div class="flex flex-col">
-<h1 class="text-gray-900 dark:text-white text-base font-bold leading-normal">Medcare ERP</h1>
+<h1 class="text-gray-900 dark:text-white text-base font-bold leading-normal">Medcare</h1>
 <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Main Menu</p>
 </div>
 </div>
@@ -107,10 +107,10 @@
 <div class="flex items-center justify-between">
 <!-- ButtonGroup -->
 <div class="flex gap-3">
-<button class="flex min-w-[84px] items-center justify-center gap-2 rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold">
-<span class="material-symbols-outlined text-base">add</span>
-<span class="truncate">Create New Order</span>
-</button>
+<a href="{{ route('orders.create') }}" class="flex min-w-[84px] items-center justify-center gap-2 rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold btn" role="button">
+    <span class="material-symbols-outlined text-base">add</span>
+    <span class="truncate">Create New Order</span>
+</a>
 <button class="flex min-w-[84px] items-center justify-center rounded-lg h-10 px-4 bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 text-sm font-bold">
 <span class="truncate">New Internal Requisition</span>
 </button>

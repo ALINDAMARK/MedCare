@@ -1,6 +1,10 @@
 <!doctype html>
 <html>
-<head><meta charset="utf-8"><title>Edit Order</title></head>
+<head>
+    <meta charset="utf-8">
+    <title>Edit Order</title>
+    <link rel="stylesheet" href="{{ asset('css/form.css') }}">
+</head>
 <body>
 <h1>Edit Order</h1>
 @if(session('success'))<p style="color:green">{{ session('success') }}</p>@endif
@@ -33,5 +37,6 @@
     @method('DELETE')
     <button type="submit" style="color:red">Delete</button>
 </form>
+    <script src="{{ asset('js/form.js') }}"></script>
 </body>
 </html>

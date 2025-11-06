@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Create Product</title>
+    <link rel="stylesheet" href="{{ asset('css/form.css') }}">
 </head>
 <body>
     <h1>Create Product</h1>
@@ -30,7 +31,8 @@
             <label>Description</label>
             <textarea name="description">{{ old('description') }}</textarea>
         </div>
-        <button type="submit">Create</button>
+    <button type="submit" class="btn">Create</button>
     </form>
+    <script src="{{ asset('js/form.js') }}"></script>
 </body>
 </html>

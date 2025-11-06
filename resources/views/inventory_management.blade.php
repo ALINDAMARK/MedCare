@@ -3,7 +3,7 @@
 <html class="light" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Medcare ERP - Stock Management</title>
+<title>Medcare- Stock Management</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
@@ -45,7 +45,7 @@
 <div class="flex items-center gap-3 p-4 border-b border-gray-200 dark:border-gray-800 h-16">
 <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="Medcare ERP Logo" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDdKQET3sbw7m9-TBexztJ15pWGavfZVsXHsFVX13IT6yPXJOq14VbogNfvACgL6GqXZBCmfq10JXosx_oycUQzN1PA8tdBUNbkka18OZ4e_SVPO-VHxYL9gnxoos3BzdquqS67412aPYVkHG19XyWzP9OqER_7tZhbmUGT9ESTRcvuS1C7njh8iq6zKWW_f0HeTq7_uixu1WPCixhnUv6LcCXvv9XDQXGA-OlEZ0nUFMOzbnlc4oeYnymyOsR_TvDh-gVMoM3Iacw');"></div>
 <div class="flex flex-col">
-<h1 class="text-base font-bold text-gray-900 dark:text-white">Medcare ERP</h1>
+<h1 class="text-base font-bold text-gray-900 dark:text-white">Medcare </h1>
 <p class="text-sm font-normal text-gray-500 dark:text-gray-400">Store Admin</p>
 </div>
 </div>
@@ -102,10 +102,10 @@
 </label>
 </div>
 <div class="flex items-center gap-4">
-<button class="flex min-w-[84px] cursor-pointer items-center justify-center rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold gap-2 hover:bg-primary/90">
-<span class="material-symbols-outlined text-base">add</span>
-<span class="truncate">Add New Product</span>
-</button>
+<a href="{{ route('products.create') }}" class="flex min-w-[84px] cursor-pointer items-center justify-center rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold gap-2 hover:bg-primary/90 btn" role="button">
+    <span class="material-symbols-outlined text-base">add</span>
+    <span class="truncate">Add New Product</span>
+</a>
 <button class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-600 dark:text-gray-400">
 <span class="material-symbols-outlined">notifications</span>
 </button>

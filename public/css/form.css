@@ -1,0 +1,48 @@
+/* Basic form styles for create/edit pages */
+body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial; color: #222; padding: 18px; }
+h1 { font-size: 1.5rem; margin-bottom: 0.75rem; }
+form { max-width: 720px; background: #fff; padding: 16px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+form div { margin-bottom: 0.75rem; }
+label { display: block; font-weight: 600; margin-bottom: 0.25rem; }
+input[type="text"], input[type="email"], input[type="number"], textarea, select, input { 
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px 10px;
+  border: 1px solid #d1d5db; /* slate-200 */
+  border-radius: 6px;
+  background: #fff;
+}
+textarea { min-height: 80px; resize: vertical; }
+.error-msg { color: #b91c1c; font-size: 0.9rem; margin-top: 0.25rem; }
+button[type="submit"] { background: #0ea5a4; color: white; border: none; padding: 8px 12px; border-radius: 6px; cursor: pointer; font-weight:600 }
+button[type="submit"]:disabled { opacity: 0.6; cursor: not-allowed }
+.btn-inline-style { display:inline-block; }
+
+/* Button and link button utilities to improve responsiveness */
+.btn,
+button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .12s ease, transform .08s ease;
+}
+
+.btn:active, button:active { transform: translateY(1px); }
+
+/* Primary and subtle variants (keeps existing colors from inline classes) */
+.btn-full { width: 100%; }
+
+/* Small screens: make buttons stack and fill the container */
+@media (max-width: 640px) {
+  .btn, button { width: 100% !important; min-width: 0 !important; }
+  .btn + .btn, button + button { margin-top: 0.5rem; }
+}
+.small-meta { font-size: 0.9rem; color:#374151; margin-bottom: 8px; }
+
+/* helper when JS adds validation state */
+.has-error input, .has-error textarea, .has-error select { border-color: #f87171; box-shadow: 0 0 0 3px rgba(248,113,113,0.08); }

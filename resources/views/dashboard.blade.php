@@ -3,7 +3,7 @@
 <html lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Medcare ERP Dashboard</title>
+<title>Medcare Dashboard</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
@@ -49,7 +49,7 @@
 <path d="M4 42.4379C4 42.4379 14.0962 36.0744 24 41.1692C35.0664 46.8624 44 42.2078 44 42.2078L44 7.01134C44 7.01134 35.068 11.6577 24.0031 5.96913C14.0971 0.876274 4 7.27094 4 7.27094L4 42.4379Z" fill="currentColor"></path>
 </svg>
 </div>
-<h1 class="text-slate-900 dark:text-white text-xl font-bold leading-normal">Medcare ERP</h1>
+<h1 class="text-slate-900 dark:text-white text-xl font-bold leading-normal">Medcare </h1>
 </div>
 <nav class="flex flex-col gap-2 mt-4">
 <a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/10 text-primary" href="{{ route('dashboard') }}">
@@ -107,7 +107,7 @@
 <div class="flex items-center gap-3">
 <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User avatar image" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAjL1fuL3mmoRPzTmhFQujMwlEwxLA5Mj8iI8rh8OtzD5OvkPzDmat_7FDrXglsCFuX0_0xjGoFGM0wFTXW5xDcy8CKYBuNXb_BC7UCmiRJ4st6h0BRx-K9ZTT0BCniwS0MqvAK2NGeNjEXOCDl2ZmzwKIDrk2BgSoKMWdShLeYuQxyzVoEdtXSqync39Sj4L2SBK3vpXE0lU11KqTFmYhHAqRDHt1Rt4SPcewj4dKPx67yH0iUQFTEtKlVbUC99c99rvjp2ZZEQwg");'></div>
 <div class="flex flex-col text-sm text-left">
-<p class="font-semibold text-slate-800 dark:text-slate-200">Alex Turner</p>
+<p class="font-semibold text-slate-800 dark:text-slate-200">Mark Arinda</p>
 <p class="text-slate-500 dark:text-slate-400">Pharmacist</p>
 </div>
 </div>
@@ -121,10 +121,10 @@
 <p class="text-slate-600 dark:text-slate-400 text-base font-normal leading-normal">Welcome back, here is a summary of your key operational metrics.</p>
 </div>
 <div class="flex gap-4">
-<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] gap-2">
-<span class="material-symbols-outlined text-base">add</span>
-<span class="truncate">Add New Order</span>
-</button>
+<a href="{{ route('orders.create') }}" class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] gap-2 btn" role="button">
+  <span class="material-symbols-outlined text-base">add</span>
+  <span class="truncate">Add New Order</span>
+</a>
 <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-slate-200 dark:bg-slate-800 text-slate-900 dark:text-white text-sm font-bold leading-normal tracking-[0.015em]">
 <span class="truncate">Generate Report</span>
 </button>
@@ -167,9 +167,9 @@
 <div class="flex flex-col gap-4">
 <div class="flex items-center justify-between">
 <div class="flex items-center gap-3">
-<div class="bg-blue-100 text-blue-600 rounded-full size-10 flex items-center justify-center font-bold">GS</div>
+<div class="bg-blue-100 text-blue-600 rounded-full size-10 flex items-center justify-center font-bold">AH</div>
 <div>
-<p class="font-medium text-slate-800 dark:text-slate-200">Global Supplies</p>
+<p class="font-medium text-slate-800 dark:text-slate-200">Andey Health Supplies Ltd</p>
 <p class="text-sm text-slate-500 dark:text-slate-400">Delivery in 2 days</p>
 </div>
 </div>
@@ -177,9 +177,9 @@
 </div>
 <div class="flex items-center justify-between">
 <div class="flex items-center gap-3">
-<div class="bg-green-100 text-green-600 rounded-full size-10 flex items-center justify-center font-bold">MD</div>
+<div class="bg-green-100 text-green-600 rounded-full size-10 flex items-center justify-center font-bold">MM</div>
 <div>
-<p class="font-medium text-slate-800 dark:text-slate-200">MediDistributors</p>
+<p class="font-medium text-slate-800 dark:text-slate-200">Maya Medec supplies Ltd</p>
 <p class="text-sm text-slate-500 dark:text-slate-400">Delivery tomorrow</p>
 </div>
 </div>
@@ -187,9 +187,9 @@
 </div>
 <div class="flex items-center justify-between">
 <div class="flex items-center gap-3">
-<div class="bg-purple-100 text-purple-600 rounded-full size-10 flex items-center justify-center font-bold">PH</div>
+<div class="bg-purple-100 text-purple-600 rounded-full size-10 flex items-center justify-center font-bold">VM</div>
 <div>
-<p class="font-medium text-slate-800 dark:text-slate-200">PharmaCo</p>
+<p class="font-medium text-slate-800 dark:text-slate-200">Vardy Medix Ltd</p>
 <p class="text-sm text-slate-500 dark:text-slate-400">Pending confirmation</p>
 </div>
 </div>
@@ -197,9 +197,9 @@
 </div>
 <div class="flex items-center justify-between">
 <div class="flex items-center gap-3">
-<div class="bg-orange-100 text-orange-600 rounded-full size-10 flex items-center justify-center font-bold">HC</div>
+<div class="bg-orange-100 text-orange-600 rounded-full size-10 flex items-center justify-center font-bold">KM</div>
 <div>
-<p class="font-medium text-slate-800 dark:text-slate-200">HealthCorp</p>
+<p class="font-medium text-slate-800 dark:text-slate-200">Kasozi Medtec Ltd</p>
 <p class="text-sm text-slate-500 dark:text-slate-400">Delivered today</p>
 </div>
 </div>
@@ -225,35 +225,35 @@
 <tbody>
 <tr class="border-b border-slate-100 dark:border-slate-800">
 <td class="p-3 text-sm text-slate-700 dark:text-slate-300 font-medium">#10248</td>
-<td class="p-3 text-sm text-slate-700 dark:text-slate-300">Jane Doe</td>
+<td class="p-3 text-sm text-slate-700 dark:text-slate-300">Andrew Ndduga</td>
 <td class="p-3 text-sm text-slate-500 dark:text-slate-400">2023-10-26</td>
 <td class="p-3 text-sm"><span class="px-2 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-700">Delivered</span></td>
 <td class="p-3 text-sm text-slate-800 dark:text-slate-200 font-medium text-right">$150.00</td>
 </tr>
 <tr class="border-b border-slate-100 dark:border-slate-800">
 <td class="p-3 text-sm text-slate-700 dark:text-slate-300 font-medium">#10249</td>
-<td class="p-3 text-sm text-slate-700 dark:text-slate-300">John Smith</td>
+<td class="p-3 text-sm text-slate-700 dark:text-slate-300">Kasozi Aloisius</td>
 <td class="p-3 text-sm text-slate-500 dark:text-slate-400">2023-10-26</td>
 <td class="p-3 text-sm"><span class="px-2 py-1 text-xs font-semibold rounded-full bg-yellow-100 text-yellow-700">Pending</span></td>
 <td class="p-3 text-sm text-slate-800 dark:text-slate-200 font-medium text-right">$85.50</td>
 </tr>
 <tr class="border-b border-slate-100 dark:border-slate-800">
 <td class="p-3 text-sm text-slate-700 dark:text-slate-300 font-medium">#10250</td>
-<td class="p-3 text-sm text-slate-700 dark:text-slate-300">Emily Clark</td>
+<td class="p-3 text-sm text-slate-700 dark:text-slate-300">Hasacha Hassan</td>
 <td class="p-3 text-sm text-slate-500 dark:text-slate-400">2023-10-25</td>
 <td class="p-3 text-sm"><span class="px-2 py-1 text-xs font-semibold rounded-full bg-blue-100 text-blue-700">Shipped</span></td>
 <td class="p-3 text-sm text-slate-800 dark:text-slate-200 font-medium text-right">$230.75</td>
 </tr>
 <tr class="border-b border-slate-100 dark:border-slate-800">
 <td class="p-3 text-sm text-slate-700 dark:text-slate-300 font-medium">#10251</td>
-<td class="p-3 text-sm text-slate-700 dark:text-slate-300">Michael Brown</td>
+<td class="p-3 text-sm text-slate-700 dark:text-slate-300">Mark Alinda</td>
 <td class="p-3 text-sm text-slate-500 dark:text-slate-400">2023-10-25</td>
 <td class="p-3 text-sm"><span class="px-2 py-1 text-xs font-semibold rounded-full bg-red-100 text-red-700">Cancelled</span></td>
 <td class="p-3 text-sm text-slate-800 dark:text-slate-200 font-medium text-right">$45.00</td>
 </tr>
 <tr>
 <td class="p-3 text-sm text-slate-700 dark:text-slate-300 font-medium">#10252</td>
-<td class="p-3 text-sm text-slate-700 dark:text-slate-300">Sarah Wilson</td>
+<td class="p-3 text-sm text-slate-700 dark:text-slate-300">Rahman Mayanja</td>
 <td class="p-3 text-sm text-slate-500 dark:text-slate-400">2023-10-24</td>
 <td class="p-3 text-sm"><span class="px-2 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-700">Delivered</span></td>
 <td class="p-3 text-sm text-slate-800 dark:text-slate-200 font-medium text-right">$112.20</td>

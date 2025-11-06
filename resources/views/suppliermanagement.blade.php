@@ -3,7 +3,7 @@
 <html class="light" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Medcare ERP - Suppliers</title>
+<title>Medcare- Suppliers</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -57,7 +57,7 @@
 <div class="flex items-center gap-3">
 <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="Medcare ERP logo" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuADqVTU_BZJ_-MXgUzA8AC8uKcREhZftgJzNWxiHz4POAfO_9mueHYiKRx24gxz8daEodJTMoAeY0Fy5BYsXM5NoYMGsFkoJhXwg94NcSm6DbqcEOVncqtOAHmmW7oE3NQ9GPFNznqjq4mUXgdHrLSQvfdpPkWky2B-6Bv4X3HfdLWXDoylAjl5vHz4bK7AiDspyq3Yc3ROX65okAQ1eOejXaV56XpaLrb-sysEOius7IhIamUAI7ZrJdGadAwWwkgu6YVYylysQfE");'></div>
 <div class="flex flex-col">
-<h1 class="text-gray-900 dark:text-white text-base font-medium leading-normal">Medcare ERP</h1>
+<h1 class="text-gray-900 dark:text-white text-base font-medium leading-normal">Medcare</h1>
 <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Store Admin</p>
 </div>
 </div>
@@ -92,10 +92,10 @@
 <!-- PageHeading -->
 <div class="flex flex-wrap justify-between items-center gap-3">
 <h1 class="text-gray-900 dark:text-white text-4xl font-black leading-tight tracking-[-0.033em]">Suppliers</h1>
-<button class="flex min-w-[84px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em]">
-<span class="material-symbols-outlined text-base">add_circle</span>
-<span class="truncate">Add New Supplier</span>
-</button>
+<a href="{{ route('suppliers.create') }}" class="flex min-w-[84px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] btn" role="button">
+    <span class="material-symbols-outlined text-base">add_circle</span>
+    <span class="truncate">Add New Supplier</span>
+</a>
 </div>
 <!-- ToolBar -->
 <div class="flex flex-wrap justify-between items-center gap-4 p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700">
@@ -169,8 +169,8 @@
 <!-- Detail View Pane -->
 <div class="w-full max-w-md flex flex-col bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 h-fit sticky top-6">
 <div class="p-4 border-b border-gray-200 dark:border-gray-700">
-<h2 class="text-lg font-bold text-gray-900 dark:text-white">Global Pharma Inc.</h2>
-<p class="text-sm text-gray-500 dark:text-gray-400">ID: GP-10234</p>
+<h2 class="text-lg font-bold text-gray-900 dark:text-white">Kasozi Medtec Ltd</h2>
+<p class="text-sm text-gray-500 dark:text-gray-400">ID: KM-10234</p>
 </div>
 <div class="flex border-b border-gray-200 dark:border-gray-700">
 <button class="flex-1 p-3 text-sm font-medium border-b-2 border-primary text-primary">Supplier Info</button>
@@ -181,7 +181,7 @@
 <div class="grid grid-cols-2 gap-4 text-sm">
 <div>
 <p class="text-gray-500 dark:text-gray-400">Legal Name</p>
-<p class="font-medium text-gray-900 dark:text-white">Global Pharmaceuticals Incorporated</p>
+<p class="font-medium text-gray-900 dark:text-white">Kasozi Medtec Ltd</p>
 </div>
 <div>
 <p class="text-gray-500 dark:text-gray-400">VAT Number</p>
@@ -189,7 +189,7 @@
 </div>
 <div>
 <p class="text-gray-500 dark:text-gray-400">Account Manager</p>
-<p class="font-medium text-gray-900 dark:text-white">John Doe</p>
+<p class="font-medium text-gray-900 dark:text-white">Kasozi Aloisius</p>
 </div>
 <div>
 <p class="text-gray-500 dark:text-gray-400">Payment Terms</p>
@@ -198,7 +198,7 @@
 </div>
 <div>
 <p class="text-sm text-gray-500 dark:text-gray-400">Business Address</p>
-<p class="text-sm font-medium text-gray-900 dark:text-white">123 Pharma Lane, Medcity, MC 12345, USA</p>
+<p class="text-sm font-medium text-gray-900 dark:text-white">Nakawa POBOX 2334 Uganda</p>
 </div>
 <div>
 <p class="text-sm text-gray-500 dark:text-gray-400">Banking Information</p>

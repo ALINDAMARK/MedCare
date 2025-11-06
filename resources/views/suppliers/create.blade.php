@@ -1,6 +1,10 @@
 <!doctype html>
 <html>
-<head><meta charset="utf-8"><title>Create Supplier</title></head>
+<head>
+    <meta charset="utf-8">
+    <title>Create Supplier</title>
+    <link rel="stylesheet" href="{{ asset('css/form.css') }}">
+</head>
 <body>
 <h1>Create Supplier</h1>
 @if(session('success'))<p style="color:green">{{ session('success') }}</p>@endif
@@ -11,7 +15,7 @@
     <div><label>Email</label><input name="email" value="{{ old('email') }}" /></div>
     <div><label>Phone</label><input name="phone" value="{{ old('phone') }}" /></div>
     <div><label>Address</label><textarea name="address">{{ old('address') }}</textarea></div>
-    <button type="submit">Create</button>
-</form>
+    <button type="submit" class="btn">Create</button>
+    <script src="{{ asset('js/form.js') }}"></script>
 </body>
 </html>
