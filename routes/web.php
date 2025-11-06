@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Basic page routes for the app's blade views
+Route::get('/dashboard', [PageController::class, 'dashboard'])->name('dashboard');
+Route::get('/inventory', [PageController::class, 'inventory'])->name('inventory');
+Route::get('/orders', [PageController::class, 'orders'])->name('orders');
+Route::get('/products', [PageController::class, 'products'])->name('products');
+Route::get('/reporting', [PageController::class, 'reporting'])->name('reporting');
+Route::get('/suppliers', [PageController::class, 'suppliers'])->name('suppliers');
