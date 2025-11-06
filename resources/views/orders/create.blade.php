@@ -14,6 +14,14 @@
             @endforeach
         </select>
     </div>
+    <div><label>Supplier</label>
+        <select name="supplier_id">
+            <option value="">-- none --</option>
+            @foreach($suppliers as $s)
+                <option value="{{ $s->id }}">{{ $s->name }}</option>
+            @endforeach
+        </select>
+    </div>
     <div><label>Quantity</label><input name="quantity" value="{{ old('quantity',1) }}" /></div>
     <div><label>Total</label><input name="total" value="{{ old('total') }}" /></div>
     <div><label>Status</label><input name="status" value="{{ old('status','pending') }}" /></div>

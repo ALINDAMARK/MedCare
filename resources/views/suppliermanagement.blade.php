@@ -131,39 +131,23 @@
 </tr>
 </thead>
 <tbody class="divide-y divide-gray-200 dark:divide-gray-700">
-<tr class="hover:bg-gray-50 dark:hover:bg-gray-700/40 bg-primary/10 dark:bg-primary/20">
-<td class="p-4 w-12"><input class="h-4 w-4 rounded border-gray-300 dark:border-gray-600 bg-gray-100 dark:bg-gray-700 text-primary focus:ring-primary/50" type="checkbox"/></td>
-<td class="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Global Pharma Inc.</td>
-<td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">GP-10234</td>
-<td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">Sarah Johnson</td>
-<td class="px-4 py-4 whitespace-nowrap"><span class="px-2.5 py-0.5 inline-flex text-xs leading-5 font-semibold rounded-full bg-accent-green/20 text-green-800 dark:text-accent-green">Active</span></td>
-<td class="px-4 py-4 whitespace-nowrap text-sm font-medium">
-<button class="p-1 text-gray-500 hover:text-primary"><span class="material-symbols-outlined text-lg">edit</span></button>
-<button class="p-1 text-gray-500 hover:text-primary"><span class="material-symbols-outlined text-lg">visibility</span></button>
-</td>
-</tr>
-<tr>
-<td class="p-4 w-12"><input class="h-4 w-4 rounded border-gray-300 dark:border-gray-600 bg-gray-100 dark:bg-gray-700 text-primary focus:ring-primary/50" type="checkbox"/></td>
-<td class="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">MedSupply Co.</td>
-<td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">MS-58721</td>
-<td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">David Chen</td>
-<td class="px-4 py-4 whitespace-nowrap"><span class="px-2.5 py-0.5 inline-flex text-xs leading-5 font-semibold rounded-full bg-accent-green/20 text-green-800 dark:text-accent-green">Active</span></td>
-<td class="px-4 py-4 whitespace-nowrap text-sm font-medium">
-<button class="p-1 text-gray-500 hover:text-primary"><span class="material-symbols-outlined text-lg">edit</span></button>
-<button class="p-1 text-gray-500 hover:text-primary"><span class="material-symbols-outlined text-lg">visibility</span></button>
-</td>
-</tr>
-<tr>
-<td class="p-4 w-12"><input class="h-4 w-4 rounded border-gray-300 dark:border-gray-600 bg-gray-100 dark:bg-gray-700 text-primary focus:ring-primary/50" type="checkbox"/></td>
-<td class="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">CareLogistics Ltd.</td>
-<td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">CL-93456</td>
-<td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">Maria Garcia</td>
-<td class="px-4 py-4 whitespace-nowrap"><span class="px-2.5 py-0.5 inline-flex text-xs leading-5 font-semibold rounded-full bg-accent-red/20 text-red-800 dark:text-accent-red">Inactive</span></td>
-<td class="px-4 py-4 whitespace-nowrap text-sm font-medium">
-<button class="p-1 text-gray-500 hover:text-primary"><span class="material-symbols-outlined text-lg">edit</span></button>
-<button class="p-1 text-gray-500 hover:text-primary"><span class="material-symbols-outlined text-lg">visibility</span></button>
-</td>
-</tr>
+@if(isset($suppliers) && $suppliers->count())
+    @foreach($suppliers as $supplier)
+    <tr>
+        <td class="p-4 w-12"><input class="h-4 w-4 rounded border-gray-300 dark:border-gray-600 bg-gray-100 dark:bg-gray-700 text-primary focus:ring-primary/50" type="checkbox"/></td>
+        <td class="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">{{ $supplier->name }}</td>
+        <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">{{ 'S-' . $supplier->id }}</td>
+        <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">{{ $supplier->contact_name }}</td>
+        <td class="px-4 py-4 whitespace-nowrap"><span class="px-2.5 py-0.5 inline-flex text-xs leading-5 font-semibold rounded-full bg-accent-green/20 text-green-800 dark:text-accent-green">Active</span></td>
+        <td class="px-4 py-4 whitespace-nowrap text-sm font-medium">
+            <a class="p-1 text-gray-500 hover:text-primary" href="{{ route('suppliers.edit', $supplier) }}"><span class="material-symbols-outlined text-lg">edit</span></a>
+            <a class="p-1 text-gray-500 hover:text-primary" href="{{ route('suppliers.show', $supplier) }}"><span class="material-symbols-outlined text-lg">visibility</span></a>
+        </td>
+    </tr>
+    @endforeach
+@else
+    <tr><td colspan="6" class="p-6 text-center">No suppliers found. <a href="{{ route('suppliers.create') }}" class="text-primary">Add a supplier</a></td></tr>
+@endif
 </tbody>
 </table>
 <!-- Pagination -->

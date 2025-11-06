@@ -33,6 +33,7 @@ class OrderController extends Controller
         $data = $request->validate([
             'order_number' => 'required|string|max:100',
             'product_id' => 'required|exists:products,id',
+            'supplier_id' => 'nullable|exists:suppliers,id',
             'quantity' => 'required|integer|min:1',
             'total' => 'required|numeric',
             'status' => 'required|string|max:50',
@@ -60,6 +61,7 @@ class OrderController extends Controller
         $data = $request->validate([
             'order_number' => 'required|string|max:100',
             'product_id' => 'required|exists:products,id',
+            'supplier_id' => 'nullable|exists:suppliers,id',
             'quantity' => 'required|integer|min:1',
             'total' => 'required|numeric',
             'status' => 'required|string|max:50',

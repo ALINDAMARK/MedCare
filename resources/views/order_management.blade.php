@@ -160,42 +160,23 @@
 </tr>
 </thead>
 <tbody>
-<tr class="border-b border-gray-200 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800/20">
-<td class="w-4 p-4"><input class="form-checkbox h-4 w-4 rounded border-gray-300 dark:border-gray-600 text-primary focus:ring-primary/50 bg-gray-100 dark:bg-gray-700" type="checkbox"/></td>
-<td class="px-4 py-3 font-medium text-gray-900 dark:text-white">#PO-00754</td>
-<td class="px-4 py-3">Global Pharma Inc.</td>
-<td class="px-4 py-3">2024-05-22</td>
-<td class="px-4 py-3"><span class="inline-flex items-center rounded-full bg-green-100 dark:bg-green-900/50 px-2 py-0.5 text-xs font-medium text-green-800 dark:text-green-300">Received</span></td>
-<td class="px-4 py-3">$1,250.00</td>
-<td class="px-4 py-3 text-right"><button class="text-gray-500 dark:text-gray-400"><span class="material-symbols-outlined">more_horiz</span></button></td>
-</tr>
-<tr class="border-b border-gray-200 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800/20">
-<td class="w-4 p-4"><input class="form-checkbox h-4 w-4 rounded border-gray-300 dark:border-gray-600 text-primary focus:ring-primary/50 bg-gray-100 dark:bg-gray-700" type="checkbox"/></td>
-<td class="px-4 py-3 font-medium text-gray-900 dark:text-white">#PO-00753</td>
-<td class="px-4 py-3">Cardiology Dept.</td>
-<td class="px-4 py-3">2024-05-21</td>
-<td class="px-4 py-3"><span class="inline-flex items-center rounded-full bg-blue-100 dark:bg-blue-900/50 px-2 py-0.5 text-xs font-medium text-blue-800 dark:text-blue-300">Shipped</span></td>
-<td class="px-4 py-3">$875.50</td>
-<td class="px-4 py-3 text-right"><button class="text-gray-500 dark:text-gray-400"><span class="material-symbols-outlined">more_horiz</span></button></td>
-</tr>
-<tr class="border-b border-gray-200 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800/20">
-<td class="w-4 p-4"><input class="form-checkbox h-4 w-4 rounded border-gray-300 dark:border-gray-600 text-primary focus:ring-primary/50 bg-gray-100 dark:bg-gray-700" type="checkbox"/></td>
-<td class="px-4 py-3 font-medium text-gray-900 dark:text-white">#PO-00752</td>
-<td class="px-4 py-3">Wellness Supplies</td>
-<td class="px-4 py-3">2024-05-20</td>
-<td class="px-4 py-3"><span class="inline-flex items-center rounded-full bg-yellow-100 dark:bg-yellow-900/50 px-2 py-0.5 text-xs font-medium text-yellow-800 dark:text-yellow-300">Pending</span></td>
-<td class="px-4 py-3">$3,420.00</td>
-<td class="px-4 py-3 text-right"><button class="text-gray-500 dark:text-gray-400"><span class="material-symbols-outlined">more_horiz</span></button></td>
-</tr>
-<tr class="border-b border-gray-200 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800/20">
-<td class="w-4 p-4"><input class="form-checkbox h-4 w-4 rounded border-gray-300 dark:border-gray-600 text-primary focus:ring-primary/50 bg-gray-100 dark:bg-gray-700" type="checkbox"/></td>
-<td class="px-4 py-3 font-medium text-gray-900 dark:text-white">#PO-00751</td>
-<td class="px-4 py-3">Pediatrics Ward</td>
-<td class="px-4 py-3">2024-05-19</td>
-<td class="px-4 py-3"><span class="inline-flex items-center rounded-full bg-red-100 dark:bg-red-900/50 px-2 py-0.5 text-xs font-medium text-red-800 dark:text-red-300">Cancelled</span></td>
-<td class="px-4 py-3">$450.00</td>
-<td class="px-4 py-3 text-right"><button class="text-gray-500 dark:text-gray-400"><span class="material-symbols-outlined">more_horiz</span></button></td>
-</tr>
+@if(isset($orders) && $orders->count())
+    @foreach($orders as $order)
+    <tr class="border-b border-gray-200 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800/20">
+        <td class="w-4 p-4"><input class="form-checkbox h-4 w-4 rounded border-gray-300 dark:border-gray-600 text-primary focus:ring-primary/50 bg-gray-100 dark:bg-gray-700" type="checkbox"/></td>
+        <td class="px-4 py-3 font-medium text-gray-900 dark:text-white">#{{ $order->order_number }}</td>
+        <td class="px-4 py-3">{{ optional($order->supplier)->name ?? optional($order->product)->name ?? '—' }}</td>
+        <td class="px-4 py-3">{{ $order->created_at ? $order->created_at->format('Y-m-d') : '-' }}</td>
+        <td class="px-4 py-3"><span class="inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium {{ $order->status == 'pending' ? 'bg-yellow-100 text-yellow-800' : ($order->status == 'received' ? 'bg-green-100 text-green-800' : 'bg-gray-100 text-gray-800') }}">{{ ucfirst($order->status) }}</span></td>
+        <td class="px-4 py-3">${{ number_format($order->total,2) }}</td>
+        <td class="px-4 py-3 text-right">
+            <a class="text-gray-500 dark:text-gray-400" href="{{ route('orders.edit', $order) }}"><span class="material-symbols-outlined">more_horiz</span></a>
+        </td>
+    </tr>
+    @endforeach
+@else
+    <tr><td colspan="7" class="p-6 text-center">No orders found. <a href="{{ route('orders.create') }}" class="text-primary">Create one</a></td></tr>
+@endif
 </tbody>
 </table>
 </div>

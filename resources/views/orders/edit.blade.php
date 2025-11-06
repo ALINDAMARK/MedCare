@@ -15,6 +15,14 @@
             @endforeach
         </select>
     </div>
+    <div><label>Supplier</label>
+        <select name="supplier_id">
+            <option value="">-- none --</option>
+            @foreach($suppliers as $s)
+                <option value="{{ $s->id }}" @if($s->id == $order->supplier_id) selected @endif>{{ $s->name }}</option>
+            @endforeach
+        </select>
+    </div>
     <div><label>Quantity</label><input name="quantity" value="{{ old('quantity', $order->quantity) }}" /></div>
     <div><label>Total</label><input name="total" value="{{ old('total', $order->total) }}" /></div>
     <div><label>Status</label><input name="status" value="{{ old('status', $order->status) }}" /></div>

@@ -158,21 +158,25 @@
 </div>
 <!-- Product Cards -->
 <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
-<!-- Product Card 1 -->
-<div class="flex flex-col overflow-hidden rounded-xl border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark shadow-sm transition-shadow hover:shadow-lg">
-<div class="relative">
-<img class="h-48 w-full object-cover" data-alt="White bottle with white pills" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVXJFBbiCmk5acFz12O5HHaUhFJI7qzkY2H_Tqlq5a_HWsVHjn2Swzs-fEatDB-MZexOwug1RmPqRx192Rq5Yu2_xwNaFTrXhz409azIGvWtUqsjWPWvRtIbf_I4LgUjTHya3BTKfBubNZl29_4REnUBEA10TBX483E-auEdvHkf8Gv1iRwFE7q_9_zsJo4YL3UupzPgmmBRYeeCaTW5s87bdjezdW1gZms0xJYgpMpiJldvFMjCUmjj6NpzhodbPWh7nWhM-MrVI"/>
-<span class="absolute top-3 left-3 rounded-full bg-orange-500 px-2 py-1 text-xs font-semibold text-white">On Sale</span>
-</div>
-<div class="flex flex-1 flex-col p-4">
-<h3 class="text-base font-semibold text-text-light dark:text-text-dark">Ibuprofen Tablets</h3>
-<p class="text-sm text-gray-500 mt-1">200mg, 50 Tablets</p>
-<div class="mt-4 flex flex-1 items-end justify-between">
-<p class="text-lg font-bold text-text-light dark:text-text-dark">$8.99</p>
-<button class="flex items-center justify-center rounded-lg h-10 px-4 bg-secondary text-white text-sm font-bold hover:bg-secondary/90">Add to Cart</button>
-</div>
-</div>
-</div>
+@if(isset($products) && $products->count())
+  @foreach($products as $product)
+  <div class="flex flex-col overflow-hidden rounded-xl border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark shadow-sm transition-shadow hover:shadow-lg">
+    <div class="relative">
+      <img class="h-48 w-full object-cover" data-alt="{{ $product->name }}" src="{{ $product->image_url ?? 'https://via.placeholder.com/600x400?text=' . urlencode($product->name) }}"/>
+    </div>
+    <div class="flex flex-1 flex-col p-4">
+      <h3 class="text-base font-semibold text-text-light dark:text-text-dark">{{ $product->name }}</h3>
+      <p class="text-sm text-gray-500 mt-1">SKU: {{ $product->sku }}</p>
+      <div class="mt-4 flex flex-1 items-end justify-between">
+        <p class="text-lg font-bold text-text-light dark:text-text-dark">${{ number_format($product->price,2) }}</p>
+        <a href="{{ route('products.show', $product) }}" class="flex items-center justify-center rounded-lg h-10 px-4 bg-secondary text-white text-sm font-bold hover:bg-secondary/90">View</a>
+      </div>
+    </div>
+  </div>
+  @endforeach
+@else
+  <div class="col-span-full text-center p-8">No products yet. <a href="{{ route('products.create') }}" class="text-primary">Add a product</a></div>
+@endif
 <!-- Product Card 2 -->
 <div class="flex flex-col overflow-hidden rounded-xl border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark shadow-sm transition-shadow hover:shadow-lg">
 <div class="relative">

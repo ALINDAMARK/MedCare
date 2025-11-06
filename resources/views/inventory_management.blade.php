@@ -170,71 +170,37 @@
 </tr>
 </thead>
 <tbody>
-<tr class="border-b dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800/50">
-<td class="p-4"><input class="form-checkbox rounded border-gray-300 dark:border-gray-600 bg-transparent text-primary focus:ring-primary" type="checkbox"/></td>
-<td class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">Paracetamol 500mg</td>
-<td class="px-6 py-4">P500-A123</td>
-<td class="px-6 py-4">850</td>
-<td class="px-6 py-4">12/2025</td>
-<td class="px-6 py-4"><span class="bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-green-900 dark:text-green-300">In Stock</span></td>
-<td class="px-6 py-4">Shelf A-12</td>
-<td class="px-6 py-4 text-right">
-<button class="p-1 text-gray-500 hover:text-primary dark:hover:text-primary"><span class="material-symbols-outlined text-lg">edit</span></button>
-<button class="p-1 text-gray-500 hover:text-red-500 dark:hover:text-red-500"><span class="material-symbols-outlined text-lg">delete</span></button>
-</td>
-</tr>
-<tr class="border-b dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800/50">
-<td class="p-4"><input class="form-checkbox rounded border-gray-300 dark:border-gray-600 bg-transparent text-primary focus:ring-primary" type="checkbox"/></td>
-<td class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">Ibuprofen 200mg</td>
-<td class="px-6 py-4">IB200-B456</td>
-<td class="px-6 py-4">45</td>
-<td class="px-6 py-4">08/2024</td>
-<td class="px-6 py-4"><span class="bg-yellow-100 text-yellow-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-yellow-900 dark:text-yellow-300">Low Stock</span></td>
-<td class="px-6 py-4">Shelf C-03</td>
-<td class="px-6 py-4 text-right">
-<button class="p-1 text-gray-500 hover:text-primary dark:hover:text-primary"><span class="material-symbols-outlined text-lg">edit</span></button>
-<button class="p-1 text-gray-500 hover:text-red-500 dark:hover:text-red-500"><span class="material-symbols-outlined text-lg">delete</span></button>
-</td>
-</tr>
-<tr class="border-b dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800/50">
-<td class="p-4"><input class="form-checkbox rounded border-gray-300 dark:border-gray-600 bg-transparent text-primary focus:ring-primary" type="checkbox"/></td>
-<td class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">Aspirin 81mg</td>
-<td class="px-6 py-4">ASP81-C789</td>
-<td class="px-6 py-4">1200</td>
-<td class="px-6 py-4">02/2026</td>
-<td class="px-6 py-4"><span class="bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-green-900 dark:text-green-300">In Stock</span></td>
-<td class="px-6 py-4">Shelf A-15</td>
-<td class="px-6 py-4 text-right">
-<button class="p-1 text-gray-500 hover:text-primary dark:hover:text-primary"><span class="material-symbols-outlined text-lg">edit</span></button>
-<button class="p-1 text-gray-500 hover:text-red-500 dark:hover:text-red-500"><span class="material-symbols-outlined text-lg">delete</span></button>
-</td>
-</tr>
-<tr class="border-b dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800/50">
-<td class="p-4"><input class="form-checkbox rounded border-gray-300 dark:border-gray-600 bg-transparent text-primary focus:ring-primary" type="checkbox"/></td>
-<td class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">Amoxicillin 250mg</td>
-<td class="px-6 py-4">AMX250-D101</td>
-<td class="px-6 py-4">320</td>
-<td class="px-6 py-4">03/2023</td>
-<td class="px-6 py-4"><span class="bg-red-100 text-red-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-red-900 dark:text-red-300">Expired</span></td>
-<td class="px-6 py-4">Disposal Bin</td>
-<td class="px-6 py-4 text-right">
-<button class="p-1 text-gray-500 hover:text-primary dark:hover:text-primary"><span class="material-symbols-outlined text-lg">edit</span></button>
-<button class="p-1 text-gray-500 hover:text-red-500 dark:hover:text-red-500"><span class="material-symbols-outlined text-lg">delete</span></button>
-</td>
-</tr>
-<tr class="border-b dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800/50">
-<td class="p-4"><input class="form-checkbox rounded border-gray-300 dark:border-gray-600 bg-transparent text-primary focus:ring-primary" type="checkbox"/></td>
-<td class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">Loratadine 10mg</td>
-<td class="px-6 py-4">LOR10-E212</td>
-<td class="px-6 py-4">250</td>
-<td class="px-6 py-4">11/2027</td>
-<td class="px-6 py-4"><span class="bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-green-900 dark:text-green-300">In Stock</span></td>
-<td class="px-6 py-4">Shelf B-08</td>
-<td class="px-6 py-4 text-right">
-<button class="p-1 text-gray-500 hover:text-primary dark:hover:text-primary"><span class="material-symbols-outlined text-lg">edit</span></button>
-<button class="p-1 text-gray-500 hover:text-red-500 dark:hover:text-red-500"><span class="material-symbols-outlined text-lg">delete</span></button>
-</td>
-</tr>
+@if(isset($products) && $products->count())
+    @foreach($products as $product)
+    <tr class="border-b dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800/50">
+        <td class="p-4"><input class="form-checkbox rounded border-gray-300 dark:border-gray-600 bg-transparent text-primary focus:ring-primary" type="checkbox"/></td>
+        <td class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">{{ $product->name }}</td>
+        <td class="px-6 py-4">{{ $product->sku }}</td>
+        <td class="px-6 py-4">{{ $product->quantity }}</td>
+        <td class="px-6 py-4">{{ $product->expires_at ?? '-' }}</td>
+        <td class="px-6 py-4">
+            @if($product->quantity > 50)
+                <span class="bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full">In Stock</span>
+            @elseif($product->quantity > 0)
+                <span class="bg-yellow-100 text-yellow-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full">Low Stock</span>
+            @else
+                <span class="bg-red-100 text-red-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full">Out</span>
+            @endif
+        </td>
+        <td class="px-6 py-4">{{ $product->location ?? '—' }}</td>
+        <td class="px-6 py-4 text-right">
+            <a class="p-1 text-gray-500 hover:text-primary" href="{{ route('products.edit', $product) }}"><span class="material-symbols-outlined text-lg">edit</span></a>
+            <form method="POST" action="{{ route('products.destroy', $product) }}" style="display:inline" onsubmit="return confirm('Delete this product?')">
+                @csrf
+                @method('DELETE')
+                <button class="p-1 text-gray-500 hover:text-red-500" type="submit"><span class="material-symbols-outlined text-lg">delete</span></button>
+            </form>
+        </td>
+    </tr>
+    @endforeach
+@else
+    <tr><td colspan="8" class="p-6 text-center">No products found. <a href="{{ route('products.create') }}" class="text-primary">Add a product</a></td></tr>
+@endif
 </tbody>
 </table>
 </div>
