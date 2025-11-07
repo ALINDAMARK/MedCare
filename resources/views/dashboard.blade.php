@@ -75,10 +75,13 @@
 </nav>
 </div>
 <div class="flex flex-col gap-4">
-<div class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800">
-<span class="material-symbols-outlined">logout</span>
-<p class="text-sm font-medium leading-normal">Logout</p>
-</div>
+  <form method="POST" action="{{ route('logout') }}">
+    @csrf
+    <button type="submit" class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800">
+      <span class="material-symbols-outlined">logout</span>
+      <p class="text-sm font-medium leading-normal">Logout</p>
+    </button>
+  </form>
 </div>
 </aside>
 <!-- Main Content -->

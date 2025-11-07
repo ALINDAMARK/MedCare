@@ -22,7 +22,6 @@ class PageController extends Controller
             $pendingOrders = 0;
             $lowStock = 0;
         }
-
         return view('dashboard', compact('totalInventoryValue', 'pendingOrders', 'lowStock'));
     }
 

@@ -24,7 +24,7 @@ Route::get('/welcome', function () {
 });
 
 // Basic page routes for the app's blade views
-Route::get('/dasboard', [PageController::class, 'dashboard'])->name('dashboard');
+Route::get('/', [PageController::class, 'dashboard'])->name('dashboard');
 Route::get('/inventory', [PageController::class, 'inventory'])->name('inventory');
 Route::get('/orders', [PageController::class, 'orders'])->name('orders');
 Route::get('/products', [PageController::class, 'products'])->name('products');
@@ -45,7 +45,7 @@ Route::resource('suppliers', SupplierController::class)->except(['index']);
 
 // Authentication routes: register & login (guest only)
 Route::middleware('guest')->group(function () {
-    Route::get('/', [RegisterController::class, 'show'])->name('register');
+    Route::get('/register', [RegisterController::class, 'show'])->name('register');
     Route::post('/register', [RegisterController::class, 'register'])->name('register.post');
 
     Route::get('/login', [LoginController::class, 'show'])->name('login');
