@@ -205,26 +205,16 @@
 </table>
 </div>
 <!-- Pagination -->
-<nav aria-label="Table navigation" class="flex items-center justify-between p-4">
-<span class="text-sm font-normal text-gray-500 dark:text-gray-400">Showing <span class="font-semibold text-gray-900 dark:text-white">1-5</span> of <span class="font-semibold text-gray-900 dark:text-white">1000</span></span>
-<ul class="inline-flex -space-x-px text-sm h-8">
-<li>
-<a class="flex items-center justify-center px-3 h-8 ms-0 leading-tight text-gray-500 bg-white border border-e-0 border-gray-300 rounded-s-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white" href="#">Previous</a>
-</li>
-<li>
-<a aria-current="page" class="flex items-center justify-center px-3 h-8 text-primary border border-gray-300 bg-primary/10 hover:bg-primary/20 hover:text-primary dark:border-gray-700 dark:bg-gray-700 dark:text-white" href="#">1</a>
-</li>
-<li>
-<a class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white" href="#">2</a>
-</li>
-<li>
-<a class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white" href="#">3</a>
-</li>
-<li>
-<a class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white" href="#">Next</a>
-</li>
-</ul>
-</nav>
+<div class="p-4">
+    @if(isset($products) && $products instanceof \Illuminate\Contracts\Pagination\Paginator)
+        <div class="flex items-center justify-between">
+            <div class="text-sm text-gray-500 dark:text-gray-400">Showing <span class="font-semibold text-gray-900 dark:text-white">{{ $products->firstItem() ?? 0 }}-{{ $products->lastItem() ?? 0 }}</span> of <span class="font-semibold text-gray-900 dark:text-white">{{ $products->total() }}</span></div>
+            <div>
+                {{ $products->links() }}
+            </div>
+        </div>
+    @endif
+</div>
 </div>
 </div>
 </main>

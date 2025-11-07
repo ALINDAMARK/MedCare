@@ -151,18 +151,15 @@
 </tbody>
 </table>
 <!-- Pagination -->
-<div class="flex items-center justify-center p-4 border-t border-gray-200 dark:border-gray-700">
-<a class="flex size-8 items-center justify-center rounded-md hover:bg-gray-100 dark:hover:bg-gray-700" href="#">
-<span class="material-symbols-outlined text-lg">chevron_left</span>
-</a>
-<a class="text-sm font-bold flex size-8 items-center justify-center text-white rounded-full bg-primary" href="#">1</a>
-<a class="text-sm font-normal flex size-8 items-center justify-center text-gray-700 dark:text-gray-300 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700" href="#">2</a>
-<a class="text-sm font-normal flex size-8 items-center justify-center text-gray-700 dark:text-gray-300 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700" href="#">3</a>
-<span class="text-sm font-normal flex size-8 items-center justify-center text-gray-500 dark:text-gray-400" href="#">...</span>
-<a class="text-sm font-normal flex size-8 items-center justify-center text-gray-700 dark:text-gray-300 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700" href="#">10</a>
-<a class="flex size-8 items-center justify-center rounded-md hover:bg-gray-100 dark:hover:bg-gray-700" href="#">
-<span class="material-symbols-outlined text-lg">chevron_right</span>
-</a>
+<div class="p-4 border-t border-gray-200 dark:border-gray-700">
+    @if(isset($suppliers) && $suppliers instanceof \Illuminate\Contracts\Pagination\Paginator)
+        <div class="flex items-center justify-between">
+            <div class="text-sm text-gray-500 dark:text-gray-400">Showing <span class="font-semibold text-gray-900 dark:text-white">{{ $suppliers->firstItem() ?? 0 }}-{{ $suppliers->lastItem() ?? 0 }}</span> of <span class="font-semibold text-gray-900 dark:text-white">{{ $suppliers->total() }}</span></div>
+            <div>
+                {{ $suppliers->links() }}
+            </div>
+        </div>
+    @endif
 </div>
 </div>
 </div>

@@ -5,6 +5,8 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SupplierController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,7 +24,7 @@ Route::get('/welcome', function () {
 });
 
 // Basic page routes for the app's blade views
-Route::get('/', [PageController::class, 'dashboard'])->name('dashboard');
+Route::get('/dasboard', [PageController::class, 'dashboard'])->name('dashboard');
 Route::get('/inventory', [PageController::class, 'inventory'])->name('inventory');
 Route::get('/orders', [PageController::class, 'orders'])->name('orders');
 Route::get('/products', [PageController::class, 'products'])->name('products');
@@ -40,3 +42,15 @@ Route::resource('orders', OrderController::class)->except(['index']);
 
 Route::get('/suppliers', [SupplierController::class, 'index'])->name('suppliers');
 Route::resource('suppliers', SupplierController::class)->except(['index']);
+
+// Authentication routes: register & login (guest only)
+Route::middleware('guest')->group(function () {
+    Route::get('/', [RegisterController::class, 'show'])->name('register');
+    Route::post('/register', [RegisterController::class, 'register'])->name('register.post');
+
+    Route::get('/login', [LoginController::class, 'show'])->name('login');
+    Route::post('/login', [LoginController::class, 'login'])->name('login.post');
+});
+
+// Logout (requires auth)
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout')->middleware('auth');

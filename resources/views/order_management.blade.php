@@ -180,16 +180,16 @@
 </tbody>
 </table>
 </div>
-<nav aria-label="Table navigation" class="flex items-center justify-between p-4">
-<span class="text-sm font-normal text-gray-500 dark:text-gray-400">Showing <span class="font-semibold text-gray-900 dark:text-white">1-4</span> of <span class="font-semibold text-gray-900 dark:text-white">100</span></span>
-<ul class="inline-flex -space-x-px text-sm h-8">
-<li><a class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-l-lg hover:bg-gray-100 dark:hover:bg-gray-700" href="#">Previous</a></li>
-<li><a class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700" href="#">1</a></li>
-<li><a class="flex items-center justify-center px-3 h-8 leading-tight text-primary bg-primary/20 dark:bg-primary/30 border border-primary/50" href="#">2</a></li>
-<li><a class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700" href="#">3</a></li>
-<li><a class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-r-lg hover:bg-gray-100 dark:hover:bg-gray-700" href="#">Next</a></li>
-</ul>
-</nav>
+<div class="p-4">
+    @if(isset($orders) && $orders instanceof \Illuminate\Contracts\Pagination\Paginator)
+        <div class="flex items-center justify-between">
+            <div class="text-sm text-gray-500 dark:text-gray-400">Showing <span class="font-semibold text-gray-900 dark:text-white">{{ $orders->firstItem() ?? 0 }}-{{ $orders->lastItem() ?? 0 }}</span> of <span class="font-semibold text-gray-900 dark:text-white">{{ $orders->total() }}</span></div>
+            <div>
+                {{ $orders->links() }}
+            </div>
+        </div>
+    @endif
+</div>
 </div>
 </div>
 </div>
